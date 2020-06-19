@@ -8,14 +8,27 @@ export const AddTransaction = () => {
     const { addTransaction } = useContext(GlobalContext);
     const onSubmit = e => {
         e.preventDefault();
-        if (Number(amount) === 0) {
+        /*if (Number(amount) === 0) {
             alert('Please enter the transaction amount in numbers');
             return false;
         }
         if (text.length === 0){
             alert('Please enter the required transaction Name')
             return false;
+        }*/
+        if (isNaN(amount))  {
+            alert('Please enter the transaction amount in numeric keywords');
+            return false;
         }
+        var regex=/^[A-Za-z]+$/;
+        if (text.match(regex)){
+            return true;
+        }
+            else
+            {
+                alert('Please enter the required transaction name in alphabet characters');
+                return false;
+            }
     
     const newTransaction = {
         id: Math.floor(Math.random()* 100000000),
