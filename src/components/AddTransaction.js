@@ -57,7 +57,7 @@ export const AddTransaction = () => {
             <label htmlFor="text">Text</label>
             <input type="text"  value={text} onChange={(e)=>{setText(e.target.value)}}
              placeholder="Enter text..."
-             required = "required></input>
+             required = "required"></input>
 
            </div>
            <div className="form-control">
@@ -65,7 +65,7 @@ export const AddTransaction = () => {
                (negative -expense, positive -income)</label>
                <input type="amount" value={amount} onChange={(e)=>{setAmount(e.target.value)}} 
                placeholder="Enter amount..."
-               required = "required/>
+               required = "required"/>
 
            </div>
            <button className="btn">Add transaction</button>
