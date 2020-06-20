@@ -16,7 +16,7 @@ export const AddTransaction = () => {
             alert('Please enter the required transaction Name')
             return false;
         }*/
-        if (isNaN(amount))  {
+        /*if (isNaN(amount))  {
             alert('Please enter the transaction amount in numeric keywords');
             return false;
         }
@@ -28,7 +28,17 @@ export const AddTransaction = () => {
             {
                 alert('Please enter the required transaction name in alphabet characters');
                 return false;
-            }
+            }*/
+        if (isNaN(amount))  {
+            alert('Please enter the transaction amount in numeric keywords');
+            return false;
+        }
+        var matches = text.match(/\d+/g);
+        if (matches != null) {
+           alert('Please enter alphabet character');
+           return false;
+           
+}
     
     const newTransaction = {
         id: Math.floor(Math.random()* 100000000),
